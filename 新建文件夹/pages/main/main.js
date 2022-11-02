@@ -6,14 +6,19 @@ Page({
      * 页面的初始数据
      */
     data: {
-      id:''
+      id:'',
+      arr:[]
     },
     xiangq(){
         xiangqing(
                 this.data.id
             
         ).then(res=>{
-            console.log(res);
+
+            this.setData({
+                arr:res.data.data
+            })
+            console.log(this.data.arr);
         })
     },
     /**

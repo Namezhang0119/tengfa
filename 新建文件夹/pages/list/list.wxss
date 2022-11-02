@@ -1,1 +1,12 @@
-/* pages/list/list.wxss */
+.box{
+    width: 750rpx;
+    height:auto ;
+    margin: 0 auto;
+}
+.box .box1{
+    width: 740rpx;
+    height: 100rpx;
+}
+.box .box1 .sp1{
+    margin: 0 10rpx;
+}

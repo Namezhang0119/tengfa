@@ -1,2 +1,10 @@
-<!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class="box">
+<view class="box1">
+    <text class="sp1" bindtap="che" data-id="{{item.id}}" wx:for="{{chexing}}" wx:key="item">{{item.model}}</text>
+</view>
+    <view wx:for="{{arr}}" wx:key="item">
+        <view>{{item.carName}}</view>
+            <image src="{{item.cover}}"></image>
+            <view>{{item.currentPrice}}万元</view>
+    </view>
+</view>

@@ -3,7 +3,7 @@
 <view>首页</view>
 <view class="box-t">
     <view>便捷选车</view>
-    <view class="box1" bindtap="golsit" wx:for="{{bianjiearr}}" data-label="{{item.label}}" wx:key="item">
+    <view class="box1" bindtap="golsit" wx:for="{{bianjiearr}}" data-id="{{item.queryRules}}" wx:key="item">
     <image class="img1" src="{{item.logo}}"></image>
     <view class="sp1">{{item.label}}</view>
     </view>

@@ -39,10 +39,17 @@ export function xiangqing(obj) {
     })
 }
 //二手车 品牌
-export function pinpai(obj) {
+// export function pinpai(obj) {
+//     return axios({
+//         header:headers,
+//         url: baseUrl  + `/api/tfcar/car/customSeries`,
+//         // ...obj
+//     })
+// }
+//二手车选择 品牌
+export function pinpai  (obj){
     return axios({
         header:headers,
-        url: baseUrl  + `/api/tfcar/car/customSeries`,
-        // ...obj
+        url: baseUrl+'/api/tfcar/car/list?carBrand='+ obj,
     })
 }

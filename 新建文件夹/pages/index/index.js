@@ -37,12 +37,12 @@ Page({
   },
   //go 二手
   golsit(e){
-    console.log(e.currentTarget.dataset.label);
-    wx.navigateTo({
-      url: '/pages/list/list',
-      success:res=>{
-        res.eventChannel.emit('label',e.currentTarget.dataset.label)
-      }
+
+    let id=e.currentTarget.dataset.id.split(':')[1].split('}')[0]
+    console.log(id);
+    wx.reLaunch({
+      url: `/pages/list/list?label=${id}`,
+  
     })
   },
   //详情

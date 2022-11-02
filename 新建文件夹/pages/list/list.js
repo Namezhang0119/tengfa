@@ -1,29 +1,60 @@
 // pages/list/list.js
 
-
+const { pinpai, chexing } = require("../../pulgins/apis")
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-      label:''
+        carBrand: '',
+        carModel: '',
+        arr: [],
+        chexing: []
     },
-
+    get() {
+        pinpai(
+            this.data.carBrand
+        ).then(res => {
+            this.setData({
+                arr: res.data.data.content
+            })
+            console.log(this.data.arr);
+        })
+    },
+    che(e) {
+   
+        this.setData({
+            carModel:e.currentTarget.dataset.id
+        })
+        pinpai(
+            this.data.carModel,
+            
+        ).then(res => {
+            this.setData({
+                arr: res.data.data.content
+            })
+      
+        })
+    },
+    chushi() {
+        chexing().then(res => {
+            this.setData({
+                chexing: res.data.data.content
+            })
+            console.log(this.data.chexing);
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-      var label=''
-      const eventChannel =this.getOpenerEventChannel()
-    //   eventChannel.on('label',function(data){
-        // console.log(data);
-        // label=data
-    //   })
-      // this.setData({
-      //   label:label
-      // })
-      // console.log(this.data.label);
+        console.log(options.label);
+        this.setData({
+            carBrand: options.label
+        })
+        this.get()
+        this.chushi()
     },
 
     /**
