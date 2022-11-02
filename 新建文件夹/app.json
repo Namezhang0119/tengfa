@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/index/index",
+    "/pages/list/list"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "腾发",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+      "index": [{
+          "pagePath": "/pages/index/index",
+          "text": "text",
+          "iconPath": "iconPath",
+          "selectedIconPath": "selectedIconPath"
+      }],
+      "list": [{
+        "pagePath": "/pages/list/list",
+        "text": "text",
+        "iconPath": "iconPath",
+        "selectedIconPath": "selectedIconPath"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
