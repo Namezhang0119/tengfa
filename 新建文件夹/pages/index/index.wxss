@@ -1,0 +1,40 @@
+.box{
+    width: 750rpx;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.box .box-t{
+    width: 750rpx;
+    height: 200rpx;
+    overflow: hidden;
+}
+.box .box-t .box1{
+    width: 120rpx;
+    height: 120rpx;
+    float: left;
+    margin: 0rpx 10rpx;
+}
+
+.box .box-t .box1 .img1{
+    width: 120rpx;
+    height: 120rpx;
+}
+.box .box-t .box1 .sp1{
+    text-align: center;
+}
+.box .box-b{
+    width: 750rpx;
+    height: auto;
+}
+.box .box-b .box2{
+    width: 600rpx;
+    height: 500rpx;
+    margin: 20rpx auto;
+    border: 1px solid #000;
+    text-align: center;
+}
+.box .box-b .box2 .img1{
+    width: 600rpx;
+    height: 400rpx;
+}

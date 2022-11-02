@@ -1,18 +1,36 @@
 // pages/main/main.js
+const {xiangqing}=require("../../pulgins/apis")
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      id:''
     },
-
+    xiangq(){
+        xiangqing(
+                this.data.id
+            
+        ).then(res=>{
+            console.log(res);
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+      var id=''
+      const eventChannel =this.getOpenerEventChannel()
+      eventChannel.on('id',function(data){
+        console.log(data);
+        id=data
+      })
+      this.setData({
+        id:id
+      })
+      console.log(this.data.id);
+      this.xiangq()
     },
 
     /**

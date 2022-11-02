@@ -1,18 +1,29 @@
 // pages/list/list.js
+
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      label:''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+      var label=''
+      const eventChannel =this.getOpenerEventChannel()
+    //   eventChannel.on('label',function(data){
+        // console.log(data);
+        // label=data
+    //   })
+      // this.setData({
+      //   label:label
+      // })
+      // console.log(this.data.label);
     },
 
     /**

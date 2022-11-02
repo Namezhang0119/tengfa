@@ -1,8 +1,20 @@
 <!--index.wxml-->
-<view class="container">
+<view class="box">
 <view>首页</view>
-    <view wx:for="{{arr}}" wx:key="item">
-        <view>{{item.carName}}</view>
-        <image src="{{item.cover}}"></image>
+<view class="box-t">
+    <view>便捷选车</view>
+    <view class="box1" bindtap="golsit" wx:for="{{bianjiearr}}" data-label="{{item.label}}" wx:key="item">
+    <image class="img1" src="{{item.logo}}"></image>
+    <view class="sp1">{{item.label}}</view>
     </view>
+</view>
+<view class="box-b">
+<view >二手车</view>
+    <view class="box2" bindtap="godetail" wx:for="{{arr}}" wx:key="item" data-id="{{item.ind}}">
+
+        <image class="img1" src="{{item.cover}}"></image>
+        <view>{{item.carName}}</view>
+        <view>{{item.currentPrice}}万</view>
+    </view>
+</view>
 </view>
