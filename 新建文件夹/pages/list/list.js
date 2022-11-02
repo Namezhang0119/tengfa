@@ -1,6 +1,6 @@
 // pages/list/list.js
 
-const { pinpai, chexing } = require("../../pulgins/apis")
+const { pinpai, chexing,pinpai2 } = require("../../pulgins/apis")
 Page({
 
     /**
@@ -23,18 +23,15 @@ Page({
         })
     },
     che(e) {
-   
         this.setData({
             carModel:e.currentTarget.dataset.id
         })
-        pinpai(
+        pinpai2(
             this.data.carModel,
-            
         ).then(res => {
             this.setData({
                 arr: res.data.data.content
             })
-      
         })
     },
     chushi() {

@@ -53,3 +53,9 @@ export function pinpai  (obj){
         url: baseUrl+'/api/tfcar/car/list?carBrand='+ obj,
     })
 }
+export function pinpai2  (obj){
+    return axios({
+        header:headers,
+        url: baseUrl+'/api/tfcar/car/list?carModel='+ obj,
+    })
+}
