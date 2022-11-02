@@ -1,28 +1,40 @@
 {
-  "pages":[
-    "pages/index/index",
-    "/pages/list/list"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "腾发",
-    "navigationBarTextStyle":"black"
-  },
-  "tabBar": {
-      "index": [{
-          "pagePath": "/pages/index/index",
-          "text": "text",
-          "iconPath": "iconPath",
-          "selectedIconPath": "selectedIconPath"
-      }],
-      "list": [{
-        "pagePath": "/pages/list/list",
-        "text": "text",
-        "iconPath": "iconPath",
-        "selectedIconPath": "selectedIconPath"
-    }]
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/list/list",
+        "pages/main/main",
+        "pages/list2/list2",
+        "pages/main2/main2",
+        "pages/index2/index2"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "腾发",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/list/list",
+                "text": "二手车"
+            },
+         
+            {
+                "pagePath": "pages/index2/index2",
+                "text": "二手车2"
+            },
+            {
+                "pagePath": "pages/list2/list2",
+                "text": "卖车"
+            }
+
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }

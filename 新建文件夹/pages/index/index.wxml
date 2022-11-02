@@ -1,4 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-
+<view>首页</view>
+    <view wx:for="{{arr}}" wx:key="item">
+        <view>{{item.carName}}</view>
+        <image src="{{item.cover}}"></image>
+    </view>
 </view>
